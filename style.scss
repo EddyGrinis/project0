@@ -1,5 +1,19 @@
 $color: #E9ECE7;
 
+.course {
+  h2 {
+    font-size: 32px;
+    color: green;
+  }
+  ol {
+    color: green;
+    font-size: 16px;
+  }
+}
+
+%message {
+  font-size: 20px;
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -27,7 +41,7 @@ ol li {
 }
 .navigation {
   margin: 20px;
-  font-size: 20px;
+  @extend %message;
   display: inline;
   text-transform: uppercase;
 }
@@ -37,7 +51,7 @@ a:hover {
   background-color: $color;
 }
 li {
-  font-size: 20px;
+  @extend %message;
   list-style-type: circle;
 }
 .image {
@@ -49,7 +63,7 @@ li {
   }
 }
 p {
-  font-size: 20px;
+  @extend %message;
   line-height: 1.5;
   padding-left: 20px;
 }
@@ -71,7 +85,7 @@ th, td {
 }
 .container > div {
   background-color: springgreen;
-  font-size: 20px;
+  @extend %message;
   margin: 10px;
   padding: 20px;
   width: 300px;
